@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado de Equipos{% endblock %}
+
+{% block content %}
+    <h1>Listado de Equipos</h1>
+    <ul>
+        {% for equipo in equipos %}
+            <li>{{ equipo.modelo }} - Costo: {{ equipo.costo }} - Marca: {{ equipo.marca.nombre }} - Categoría: {{ equipo.categoria.nombre }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Volver al Inicio</a>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Registrar Venta{% endblock %}
+
+{% block content %}
+    <h1>Registrar Nueva Venta</h1>
+    <form method="POST">
+        <label for="equipo_id">Equipo:</label><br>
+        <select name="equipo_id" required>
+            {% for equipo in equipos %}
+                <option value="{{ equipo.id }}">{{ equipo.modelo }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="cliente_id">Cliente:</label><br>
+        <select name="cliente_id" required>
+            {% for cliente in clientes %}
+                <option value="{{ cliente.id }}">{{ cliente.nombre }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="fecha">Fecha de Venta:</label><br>
+        <input type="date" name="fecha" required><br>
+        <input type="submit" value="Registrar">
+    </form>
+{% endblock %}

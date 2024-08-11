@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Equipo{% endblock %}
+
+{% block content %}
+    <h1>Agregar Nuevo Equipo</h1>
+    <form method="POST">
+        <label for="modelo">Modelo:</label><br>
+        <input type="text" name="modelo" required><br>
+        <label for="costo">Costo:</label><br>
+        <input type="number" name="costo" required><br>
+        <label for="marca_id">Marca:</label><br>
+        <select name="marca_id" required>
+            {% for marca in marcas %}
+                <option value="{{ marca.id }}">{{ marca.nombre }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="categoria_id">Categoría:</label><br>
+        <select name="categoria_id" required>
+            {% for categoria in categorias %}
+                <option value="{{ categoria.id }}">{{ categoria.nombre }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Agregar">
+    </form>
+{% endblock %}
