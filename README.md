@@ -1,12 +1,13 @@
-EFI Nº 1 / Python 3 Flask
+## EFI Nº 1 
+# Python 3 Flask
 Esta guía te orientará en la configuración y ejecución de nuestra aplicación Flask utilizando Python, Flask, SQLAlchemy, Flask-Migrate y PyMySQL. También se incluyen los pasos para instalar XAMPP, que nos proporcionará un servidor local con MySQL.
 
-1. Clonar el repositorio
+# 1. Clonar el repositorio
 Primero, clona el repositorio de la aplicación desde GitHub. Asegúrate de tener git instalado en tu sistema.
 
-Instalación de git:
+# Instalación de git:
 
-Ubuntu: sudo apt install git
+## Ubuntu: sudo apt install git
 
 Windows:
 Descarga e instala Git desde su pagina oficial git-scm.com.
